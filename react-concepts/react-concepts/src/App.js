@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react'
+//import States from './components/States';
+import StatesClassBased from './components/StatesClassBased';
 
 function App() {
-  const [users, setUsers] = useState([]);
+  //const [users, setUsers] = useState([]);
   const [numbers, setNumbers] = useState([1,2,3,4,5,6,7,8,9,10]);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
-      .then((json) => setUsers(json))
+      //.then((json) => setUsers(json))
   }, []);
 
   const mapData = () => {
@@ -40,8 +42,8 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Users</h1>
       <div className='card'>
+        {/*<h1>Users</h1>*/}
         {/*{
           users.map((user) => (
             <div key={user.id} style={{'border': '1px solid black', 'display': 'flex', 'width': '50%'}}>
@@ -50,15 +52,18 @@ function App() {
             </div>
           ))
         }*/}
-        {
+        {/*{
           numbers.map((number) => (
             <div key={number} style={{'border': '1px solid black', 'display': 'flex', 'width': '50%'}}>
               <p>{number}</p>
             </div>
           ))
-        }
+        }*/}
+        {/*<button onClick={mapData}>See Mapped Data</button>*/}
       </div>
-      <button onClick={mapData}>See Mapped Data</button>
+
+      {/*<States />*/}
+      <StatesClassBased />
     </div>
   )
 }

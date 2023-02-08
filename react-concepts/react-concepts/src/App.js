@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+//import { useEffect, useState } from 'react'
 
 //import States from './components/States';
 //import StatesClassBased from './components/StatesClassBased';
@@ -6,8 +6,8 @@ import { useEffect, useState } from 'react'
 //import Props from './components/Props'
 
 function App() {
-  let age = 26
-  let name = "Deepaks"
+  //let age = 26
+  //let name = "Deepaks"
   // MAP DEMO
   //const [users, setUsers] = useState([]);
 
@@ -50,22 +50,36 @@ function App() {
   //  setName(value)
   //}
 
-  useEffect(() => {
-    let age = 25;
-    let name = "Deepaks"
+  //useEffect(() => {
+  //  let age = 25;
+  //  let name = "Deepaks"
 
-    //if (age > 26) {
-    //  console.log('Age is 26');
-    //}
+  //  //if (age > 26) {
+  //  //  console.log('Age is 26');
+  //  //}
 
-    age > 26 ? console.log('Age is more than 26') : 
-    name === "Deepak" && age === 26 ? 
-    (<>{console.log('Name is Deepak')} {console.log('Age is 26')}</>) : (<>{console.log('I am less than 26')} {console.log('Name is not Deepak')}</>)
-  })
+  // inline conditional experessions and ternary operator
+  //  age > 26 ? console.log('Age is more than 26') : 
+  //  name === "Deepak" && age === 26 ? 
+  //  (<>{console.log('Name is Deepak')} {console.log('Age is 26')}</>) : (<>{console.log('I am less than 26')} {console.log('Name is not Deepak')}</>)
+  //})
+
+  // EVENT HANDLING
+  const addNums = (num1, num2) => {
+    console.log(num1+num2);
+  }
+
+  const getInput = (event) => {
+    console.log(event.target.name);
+  }
 
   return (
     <div className='App'>
       <div className='card'>
+
+        {/*EVENT HANDLING*/}
+        <input name='input' placeholder='Add somthing..' onChange={getInput}/>
+        <button onClick={() => addNums(2, 3)}>Add Numbers</button>
 
         {/* MAP and STATES DEMO */}
         {/*<h1>Users</h1>*/}
@@ -93,11 +107,11 @@ function App() {
       {/*<Props valueOfProp={name} changeName={changeName} />*/}
 
       {/* inline conditional experessions and ternary operator */}
-      {
+      {/*{
         age > 26 ? (<h1>'Age is more than 26'</h1>) : 
         name === "Deepak" && age === 26 ? 
         (<h1>Name is Deepak and Age is 26'</h1>) : (<h1>I am less than 26 Name is not Deepak</h1>)
-      }
+      }*/}
     </div>
   )
 }

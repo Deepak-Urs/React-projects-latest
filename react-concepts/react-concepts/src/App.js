@@ -4,6 +4,7 @@
 //import StatesClassBased from './components/StatesClassBased';
 
 //import Props from './components/Props'
+import Keys from './components/Keys'
 
 function App() {
   //let age = 26
@@ -65,21 +66,21 @@ function App() {
   //})
 
   // EVENT HANDLING
-  const addNums = (num1, num2) => {
-    console.log(num1+num2);
-  }
+  //const addNums = (num1, num2) => {
+  //  console.log(num1+num2);
+  //}
 
-  const getInput = (event) => {
-    console.log(event.target.name);
-  }
+  //const getInput = (event) => {
+  //  console.log(event.target.name);
+  //}
 
   return (
     <div className='App'>
       <div className='card'>
 
         {/*EVENT HANDLING*/}
-        <input name='input' placeholder='Add somthing..' onChange={getInput}/>
-        <button onClick={() => addNums(2, 3)}>Add Numbers</button>
+        {/*<input name='input' placeholder='Add somthing..' onChange={getInput}/>
+        <button onClick={() => addNums(2, 3)}>Add Numbers</button>*/}
 
         {/* MAP and STATES DEMO */}
         {/*<h1>Users</h1>*/}
@@ -112,6 +113,9 @@ function App() {
         name === "Deepak" && age === 26 ? 
         (<h1>Name is Deepak and Age is 26'</h1>) : (<h1>I am less than 26 Name is not Deepak</h1>)
       }*/}
+
+      {/* Keys */}
+      <Keys />
     </div>
   )
 }

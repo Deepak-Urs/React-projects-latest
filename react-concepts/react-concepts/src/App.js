@@ -6,7 +6,9 @@
 //import Props from './components/Props'
 //import Keys from './components/Keys'
 //import Forms from './components/Forms'
-import DynamicInputs from './components/DynamicInputs'
+//import DynamicInputs from './components/DynamicInputs'
+import ControlledComponents from './components/ControlledComponents';
+
 
 function App() {
   //let age = 26
@@ -123,7 +125,10 @@ function App() {
       {/*<Forms />*/}
 
       {/* dynamic inputs */}
-      <DynamicInputs />
+      {/*<DynamicInputs />*/}
+
+      {/*ControlledComponents*/}
+      <ControlledComponents />
     </div>
   )
 }

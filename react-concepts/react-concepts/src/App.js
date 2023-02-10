@@ -4,7 +4,9 @@
 //import StatesClassBased from './components/StatesClassBased';
 
 //import Props from './components/Props'
-import Keys from './components/Keys'
+//import Keys from './components/Keys'
+import Forms from './components/Forms'
+
 
 function App() {
   //let age = 26
@@ -115,7 +117,10 @@ function App() {
       }*/}
 
       {/* Keys */}
-      <Keys />
+      {/*<Keys />*/}
+
+      {/* Forms */}
+      <Forms />
     </div>
   )
 }

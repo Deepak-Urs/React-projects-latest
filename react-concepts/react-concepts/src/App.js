@@ -10,7 +10,8 @@
 //import ControlledComponents from './components/ControlledComponents';
 //import InnerHTML from './components/InnerHTML';
 //import Fragments from './components/Fragments';
-import StatelessFull from './components/StatelessFull';
+//import StatelessFull from './components/StatelessFull';
+import RestApiRequests from './components/RestApiRequests';
 
 
 function App() {
@@ -85,8 +86,11 @@ function App() {
     <div className='App'>
       <div className='card'>
 
+        {/* REST API Requests */}
+        <RestApiRequests />
+
         {/* StatelessFull */}
-        <StatelessFull />
+        {/*<StatelessFull />*/}
 
         {/* Fragments */}
         {/*<Fragments />*/}

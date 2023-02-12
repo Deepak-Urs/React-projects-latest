@@ -8,7 +8,9 @@
 //import Forms from './components/Forms'
 //import DynamicInputs from './components/DynamicInputs'
 //import ControlledComponents from './components/ControlledComponents';
-import InnerHTML from './components/InnerHTML';
+//import InnerHTML from './components/InnerHTML';
+//import Fragments from './components/Fragments';
+import StatelessFull from './components/StatelessFull';
 
 
 function App() {
@@ -83,8 +85,14 @@ function App() {
     <div className='App'>
       <div className='card'>
 
+        {/* StatelessFull */}
+        <StatelessFull />
+
+        {/* Fragments */}
+        {/*<Fragments />*/}
+
         {/* INNER HTML */}
-        <InnerHTML />
+        {/*<InnerHTML />*/}
 
         {/*EVENT HANDLING*/}
         {/*<input name='input' placeholder='Add somthing..' onChange={getInput}/>

@@ -7,7 +7,8 @@
 //import Keys from './components/Keys'
 //import Forms from './components/Forms'
 //import DynamicInputs from './components/DynamicInputs'
-import ControlledComponents from './components/ControlledComponents';
+//import ControlledComponents from './components/ControlledComponents';
+import InnerHTML from './components/InnerHTML';
 
 
 function App() {
@@ -82,6 +83,9 @@ function App() {
     <div className='App'>
       <div className='card'>
 
+        {/* INNER HTML */}
+        <InnerHTML />
+
         {/*EVENT HANDLING*/}
         {/*<input name='input' placeholder='Add somthing..' onChange={getInput}/>
         <button onClick={() => addNums(2, 3)}>Add Numbers</button>*/}
@@ -128,7 +132,7 @@ function App() {
       {/*<DynamicInputs />*/}
 
       {/*ControlledComponents*/}
-      <ControlledComponents />
+      {/*<ControlledComponents />*/}
     </div>
   )
 }

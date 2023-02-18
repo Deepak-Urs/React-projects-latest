@@ -7,6 +7,13 @@ function RestApiRequests() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
+    // GET request
+    getData()
+  }, [])
+
+
+  // POST, GET, PUT, DELETE
+  const getData = () => {
     axios.get('https://63f00a8d4d5eb64db0d4ba1d.mockapi.io/users')
       .then((res) => {
         console.log(res.data);
@@ -15,10 +22,10 @@ function RestApiRequests() {
       .catch((err) => {
         console.log(err)
       })
-  }, [])
+  }
 
-  // POST, GET, PUT, DELETE
   const postData = () => {
+    // POST request
     axios.post('https://63f00a8d4d5eb64db0d4ba1d.mockapi.io/users', {
       name: name,
       age: 26,
@@ -33,12 +40,25 @@ function RestApiRequests() {
   }
 
   const updateData = (id) => {
+    // PUT request
     console.log(id);
     axios.put(`https://63f00a8d4d5eb64db0d4ba1d.mockapi.io/users/${id}`, {
       name: name,
       age: 27,
       hobbies: ['Chess', 'Coding', 'Cooking']
     }, id)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
+
+  const deleteData = (id) => {
+    // PUT Method
+    console.log(id);
+    axios.delete(`https://63f00a8d4d5eb64db0d4ba1d.mockapi.io/users/${id}`)
       .then((res) => {
         console.log(res.data);
       })
@@ -61,6 +81,7 @@ function RestApiRequests() {
                 {`${user.id}. ${user.name}`}
               </h2>
               <button onClick={() => updateData(user.id)}>Update</button>
+              <button onClick={() => deleteData(user.id)}>Delete</button>
             </>
           )
         })}

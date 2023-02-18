@@ -11,7 +11,8 @@
 //import InnerHTML from './components/InnerHTML';
 //import Fragments from './components/Fragments';
 //import StatelessFull from './components/StatelessFull';
-import RestApiRequests from './components/RestApiRequests';
+//import RestApiRequests from './components/RestApiRequests';
+import Debouncing from './components/Debouncing';
 
 
 function App() {
@@ -86,8 +87,11 @@ function App() {
     <div className='App'>
       <div className='card'>
 
+        {/* Debouncing */}
+        <Debouncing />
+
         {/* REST API Requests */}
-        <RestApiRequests />
+        {/*<RestApiRequests />*/}
 
         {/* StatelessFull */}
         {/*<StatelessFull />*/}

@@ -13,7 +13,8 @@
 //import StatelessFull from './components/StatelessFull';
 //import RestApiRequests from './components/RestApiRequests';
 //import Debouncing from './components/Debouncing';
-import ContextAPI from './components/ContextAPI';
+//import ContextAPI from './components/ContextAPI';
+import ClassNames from './components/ClassNames/ClassNames';
 
 
 
@@ -89,8 +90,10 @@ function App() {
     <div className='App'>
       <div className='card'>
 
+        {/* ClassNames */}
+        <ClassNames />
         {/* ContextAPI */}
-        <ContextAPI />
+        {/*<ContextAPI />*/}
 
         {/* Debouncing */}
         {/*<Debouncing />*/}

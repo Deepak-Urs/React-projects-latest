@@ -12,7 +12,9 @@
 //import Fragments from './components/Fragments';
 //import StatelessFull from './components/StatelessFull';
 //import RestApiRequests from './components/RestApiRequests';
-import Debouncing from './components/Debouncing';
+//import Debouncing from './components/Debouncing';
+import ContextAPI from './components/ContextAPI';
+
 
 
 function App() {
@@ -87,8 +89,11 @@ function App() {
     <div className='App'>
       <div className='card'>
 
+        {/* ContextAPI */}
+        <ContextAPI />
+
         {/* Debouncing */}
-        <Debouncing />
+        {/*<Debouncing />*/}
 
         {/* REST API Requests */}
         {/*<RestApiRequests />*/}

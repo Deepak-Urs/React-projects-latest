@@ -14,7 +14,9 @@
 //import RestApiRequests from './components/RestApiRequests';
 //import Debouncing from './components/Debouncing';
 //import ContextAPI from './components/ContextAPI';
-import ClassNames from './components/ClassNames/ClassNames';
+//import ClassNames from './components/ClassNames/ClassNames';
+import LazyLoading from "./components/LazyLoading";
+//import HOC from './components/HOC';
 
 
 
@@ -90,8 +92,15 @@ function App() {
     <div className='App'>
       <div className='card'>
 
+        {/* LazyLoading */}
+        <LazyLoading />
+
+        {/* HOC */}
+        {/*<HOC />*/}
+        
         {/* ClassNames */}
-        <ClassNames />
+        {/*<ClassNames />*/}
+
         {/* ContextAPI */}
         {/*<ContextAPI />*/}
 

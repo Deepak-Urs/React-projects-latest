@@ -15,9 +15,11 @@
 //import Debouncing from './components/Debouncing';
 //import ContextAPI from './components/ContextAPI';
 //import ClassNames from './components/ClassNames/ClassNames';
-import LazyLoading from "./components/LazyLoading";
-//import HOC from './components/HOC';
+//import LazyLoading from "./components/LazyLoading";
 
+//import HOC from './components/HOC/HOC';
+import Users from './components/HOC/Users'
+import Posts from './components/HOC/Posts'
 
 
 function App() {
@@ -92,12 +94,15 @@ function App() {
     <div className='App'>
       <div className='card'>
 
-        {/* LazyLoading */}
-        <LazyLoading />
-
         {/* HOC */}
         {/*<HOC />*/}
+        <Users />
+        <hr />
+        <Posts />
         
+        {/* LazyLoading */}
+        {/*<LazyLoading />*/}
+
         {/* ClassNames */}
         {/*<ClassNames />*/}
 

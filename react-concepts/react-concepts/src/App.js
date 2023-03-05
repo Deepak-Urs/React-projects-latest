@@ -18,8 +18,12 @@
 //import LazyLoading from "./components/LazyLoading";
 
 //import HOC from './components/HOC/HOC';
-import Users from './components/HOC/Users'
-import Posts from './components/HOC/Posts'
+//import Users from './components/HOC/Users'
+//import Posts from './components/HOC/Posts'
+
+import { useEffect } from "react";
+import { getUsers } from "./components/helpers/getAllUsers"
+import { addNums, multiply } from "./components/helpers/addTwo"
 
 
 function App() {
@@ -89,6 +93,21 @@ function App() {
   //const getInput = (event) => {
   //  console.log(event.target.name);
   //}
+  const getUsersHelper = async () => {
+    let data = await getUsers(`users`);
+    console.log('res seen', data);
+  };
+
+  const addTwoNumsHelper = () => {
+    let sum = addNums(2,3);
+    let product = multiply(2,3)
+    console.log(sum)
+    console.log(product)
+  }
+  
+  useEffect(() => {
+    getUsersHelper();
+  }, []);
 
   return (
     <div className='App'>
@@ -96,9 +115,14 @@ function App() {
 
         {/* HOC */}
         {/*<HOC />*/}
-        <Users />
+        {/*<Users />
         <hr />
-        <Posts />
+        <Posts />*/}
+
+        {/* Helper functions */}
+        Helper functions
+        <button onClick={addTwoNumsHelper}>Add</button>
+
         
         {/* LazyLoading */}
         {/*<LazyLoading />*/}

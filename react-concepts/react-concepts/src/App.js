@@ -21,9 +21,11 @@
 //import Users from './components/HOC/Users'
 //import Posts from './components/HOC/Posts'
 
-import { useEffect } from "react";
-import { getUsers } from "./components/helpers/getAllUsers"
-import { addNums, multiply } from "./components/helpers/addTwo"
+//import { useEffect } from "react";
+//import { getUsers } from "./components/helpers/getAllUsers"
+//import { addNums, multiply } from "./components/helpers/addTwo"
+import Family from "./components/recursion/Family";
+import familyTree from "./data.js"
 
 
 function App() {
@@ -93,21 +95,22 @@ function App() {
   //const getInput = (event) => {
   //  console.log(event.target.name);
   //}
-  const getUsersHelper = async () => {
-    let data = await getUsers(`users`);
-    console.log('res seen', data);
-  };
 
-  const addTwoNumsHelper = () => {
-    let sum = addNums(2,3);
-    let product = multiply(2,3)
-    console.log(sum)
-    console.log(product)
-  }
+  //const getUsersHelper = async () => {
+  //  let data = await getUsers(`users`);
+  //  console.log('res seen', data);
+  //};
+
+  //const addTwoNumsHelper = () => {
+  //  let sum = addNums(2,3);
+  //  let product = multiply(2,3)
+  //  console.log(sum)
+  //  console.log(product)
+  //}
   
-  useEffect(() => {
-    getUsersHelper();
-  }, []);
+  //useEffect(() => {
+  //  getUsersHelper();
+  //}, []);
 
   return (
     <div className='App'>
@@ -119,9 +122,12 @@ function App() {
         <hr />
         <Posts />*/}
 
+        {/* Recursion */}
+        Recursion
+        <Family familyTree={familyTree} />
         {/* Helper functions */}
-        Helper functions
-        <button onClick={addTwoNumsHelper}>Add</button>
+        {/*Helper functions
+        <button onClick={addTwoNumsHelper}>Add</button>*/}
 
         
         {/* LazyLoading */}
